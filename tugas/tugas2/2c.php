@@ -9,12 +9,12 @@
             display: grid;
         }
         .square {
-            width: 100px;
-            height: 100px;
+            width: 50px;
+            height: 50px;
             background-color: #F9E8C9;
             border: 1px solid #000;
             text-align: center;
-            line-height: 100px;
+            line-height: 50px;
         }
         .line {
             display: flex;
@@ -23,19 +23,17 @@
 </head>
 <body>
     <div class="container">
-        <div class="line">
-            <div class="square">1</div>
-            </div>
-        <div class="line">
-            <div class="square">2</div>
-            <div class="square">2</div>
-        </div>
-        <div class="line">
-            <div class="square">3</div>
-            <div class="square">3</div>
-            <div class="square">3</div>
-        </div>
-        
-    </div>
+    <?php
+for ($i = 10; $i >= 1; $i--) {
+    echo '<div class="line">';
+    for ($j = 1; $j <= $i; $j++) {
+        echo '<div class="square">' . $j . '</div>';
+    }
+    echo '</div>';
+}
+?>
+       
+    </div>  
+
 </body>
 </html>
